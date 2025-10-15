@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: junior
+      changes:
+        - sql: |
+            CREATE TABLE IF NOT EXISTS users (
+              id SERIAL PRIMARY KEY,
+              name VARCHAR(100),
+              email VARCHAR(100)
+            );
+      rollback: |
+        DROP TABLE IF EXISTS users;

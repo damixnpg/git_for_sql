@@ -1,7 +1,6 @@
-version: '3.8'
-
+# El servicio de bases de datos
 services:
-  postgres:
+  postgres: # Nombre del servicio
     image: postgres:15
     container_name: demo_postgres
     environment:
@@ -11,6 +10,7 @@ services:
     ports:
       - "5432:5432"
 
+# El servicio de administrador de bases de datos pgAdmin
 # Service for pgAdmin
   pgadmin:
     image: dpage/pgadmin4

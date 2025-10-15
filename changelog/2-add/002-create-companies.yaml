@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: junior
+      changes:
+        - sql: |
+            CREATE TABLE companies (
+              id SERIAL PRIMARY KEY,
+              company VARCHAR(100),
+              broker_code VARCHAR(20),
+              tbl VARCHAR(20)
+            );
