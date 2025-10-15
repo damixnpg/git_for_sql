@@ -10,3 +10,13 @@ services:
       POSTGRES_DB: demo_db
     ports:
       - "5432:5432"
+
+# Service for pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: demo_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@demo.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"

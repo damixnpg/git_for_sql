@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Liquibase changelog file for tracking database schema changes -->
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <!-- ChangeSet: A single unit of change applied to the database -->
+    <changeSet id="1" author="junior">
+        <!-- Create 'users' table with columns: id, name, email -->
+        <createTable tableName="users">
+            <!-- 'id' column: auto-incremented, primary key -->
+            <column name="id" type="SERIAL">
+                <constraints primaryKey="true"/>
+            </column>
+            <!-- 'name' column: stores user name -->
+            <column name="name" type="VARCHAR(100)"/>
+            <!-- 'email' column: stores user email address -->
+            <column name="email" type="VARCHAR(100)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
