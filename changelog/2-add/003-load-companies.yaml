@@ -4,13 +4,13 @@ databaseChangeLog:
       author: junior
       changes:
         - loadData:
-          tableName: companies
-          file: data/brokers.csv
-          relativeToChangelogFile: false
-          encoding: UTF-8
-          separator: ","
-          quotchar: '"'
-          columns:
+            tableName: companies
+            file: data/brokers.csv
+            relativeToChangelogFile: false
+            encoding: UTF-8
+            separator: ","
+            quotchar: '"'
+            columns:
               - column:
                   name: name
                   type: STRING
